@@ -1,0 +1,160 @@
+body { 
+  font-family: Arial, sans-serif; 
+  background: #f7f7f7; 
+}
+
+.container { 
+  max-width: 520px; 
+  margin: 40px auto; 
+  padding: 20px; 
+  background: #ccdeec; 
+  border-radius: 8px; 
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+} 
+
+h1 { 
+  margin-top: 0; 
+  text-align: center;
+}
+
+.error { 
+  color: #e37d09; 
+}
+
+progress { 
+  width: 100%; 
+}
+
+button, 
+input[type="file"] {
+  width: 200px;
+  height: 40px;
+  padding: 8px 14px;
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+input[type="file"] {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+
+#uploadForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#progressContainer {
+  text-align: center;
+  margin: 15px 0;
+}
+
+#result, #error {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#downloadLink {
+  word-break: break-all;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.file-name-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.file-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stats-section {
+  margin-top: 40px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.stats-section h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #333;
+}
+
+.refresh-button {
+  background: #28a745;
+  margin-bottom: 15px;
+}
+
+.refresh-button:hover {
+  background: #218838;
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.stats-table th {
+  background: #f8f9fa;
+  font-weight: bold;
+}
+
+.stats-table tr:hover {
+  background: #f5f5f5;
+}
+
+.download-link-cell a {
+  word-break: break-all;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.download-link-cell a:hover {
+  text-decoration: underline;
+}
+
+.loading {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.empty-stats {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 20px;
+}

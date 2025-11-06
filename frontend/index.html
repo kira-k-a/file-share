@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang='ru'>
+<head>
+  <meta charset='utf-8'/>
+  <meta name='viewport' content='width=device-width,initial-scale=1'/>
+  <title>Сервис обмена файлами</title>
+  <link rel='stylesheet' href='styles.css'/>
+</head>
+<body>
+  <div class='container'>
+    <h1>Сервис обмена файлами</h1>
+
+    <form id='uploadForm'>
+      <div class="file-input-wrapper">
+        <button type="button" class="custom-file-button" id="customFileButton">
+          Выбрать файл
+        </button>
+        <div class="file-name-container">
+          <span id="fileName">Файл не выбран</span>
+        </div>
+      </div>
+      <button type='submit'>Загрузить</button>
+    </form>
+
+    <div id='progressContainer' hidden>
+      <progress id='progress' value='0' max='100'></progress>
+      <span id='status'>0%</span>
+    </div>
+
+    <div id="result" hidden>
+      <p id="downloadText">Ссылка на скачивание:</p>
+      <a id="downloadLink" href="#" target="_blank"></a>
+    </div>
+
+    <div id="error" hidden style="color:rgb(255, 136, 0)"></div>
+
+    <div class="stats-section">
+      <h2>Статистика загруженных файлов</h2>
+      <button id="refreshStats" class="refresh-button">Обновить статистику</button>
+      <div id="statsContainer">
+        <div class="loading">Загрузка статистики...</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src='upload.js'></script>
+
+</body>
+</html>
