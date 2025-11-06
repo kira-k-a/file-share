@@ -4,7 +4,7 @@ body {
 }
 
 .container { 
-  max-width: 520px; 
+  max-width: 800px; 
   margin: 40px auto; 
   padding: 20px; 
   background: #ccdeec; 
@@ -118,6 +118,7 @@ input[type="file"] {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  table-layout: fixed;
 }
 
 .stats-table th,
@@ -125,6 +126,7 @@ input[type="file"] {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+  word-wrap: break-word;
 }
 
 .stats-table th {
@@ -136,14 +138,56 @@ input[type="file"] {
   background: #f5f5f5;
 }
 
+.file-name-cell {
+  max-width: 200px;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+.file-name-cell span {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.download-link-cell {
+  max-width: 150px;
+}
+
 .download-link-cell a {
   word-break: break-all;
   color: #007bff;
   text-decoration: none;
+  display: block;
 }
 
 .download-link-cell a:hover {
   text-decoration: underline;
+}
+
+
+.stats-table th:nth-child(1),
+.stats-table td:nth-child(1) {
+  width: 40%;
+}
+
+.stats-table th:nth-child(2),
+.stats-table td:nth-child(2) {
+  width: 15%;
+  text-align: center;
+}
+
+.stats-table th:nth-child(3),
+.stats-table td:nth-child(3) {
+  width: 15%;
+  text-align: center;
+}
+
+.stats-table th:nth-child(4),
+.stats-table td:nth-child(4) {
+  width: 15%;
 }
 
 .loading {
